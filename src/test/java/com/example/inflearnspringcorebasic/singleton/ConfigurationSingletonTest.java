@@ -1,4 +1,4 @@
-package singleton;
+package com.example.inflearnspringcorebasic.singleton;
 
 import com.example.inflearnspringcorebasic.AppConfig;
 import com.example.inflearnspringcorebasic.member.MemberRepository;

@@ -1,8 +1,7 @@
-package singleton;
+package com.example.inflearnspringcorebasic.singleton;
 
 import com.example.inflearnspringcorebasic.AppConfig;
 import com.example.inflearnspringcorebasic.member.MemberService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

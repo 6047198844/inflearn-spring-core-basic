@@ -1,4 +1,4 @@
-package singleton;
+package com.example.inflearnspringcorebasic.singleton;
 
 public class SingletonService {
 
