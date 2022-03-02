@@ -1,12 +1,12 @@
 package com.example.inflearnspringcorebasic.order;
 
+import com.example.inflearnspringcorebasic.annotation.MainDiscountPolicy;
 import com.example.inflearnspringcorebasic.discount.DiscountPolicy;
-import com.example.inflearnspringcorebasic.discount.FixDiscountPolicy;
-import com.example.inflearnspringcorebasic.discount.RateDiscountPolicy;
 import com.example.inflearnspringcorebasic.member.Member;
 import com.example.inflearnspringcorebasic.member.MemberRepository;
-import com.example.inflearnspringcorebasic.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,9 +14,8 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        System.out.println("memberRepository = " + memberRepository);
-        System.out.println("discountPolicy = " + discountPolicy);
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
